@@ -206,8 +206,8 @@ URL="http://${INGRESS_HOST}:${INGRESS_PORT}/v2/health/live"
 EXPECTED_OUTPUT='{"live":true}'
 make_cluster_accessible ${SERVICE_NAME} ${URL} "" ${EXPECTED_OUTPUT}
 
-# ServerLive
-echo "HTTP ServerLive method call"
+# ModelReady
+echo "HTTP ModelReady method call"
 URL="http://${INGRESS_HOST}:${INGRESS_PORT}/v2/models/${MODEL_NAME}/ready"
 EXPECTED_OUTPUT='{"name" : "mnist", "ready": true}'
 make_cluster_accessible ${SERVICE_NAME} ${URL} "" ${EXPECTED_OUTPUT}
